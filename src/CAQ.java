@@ -1,5 +1,3 @@
-import javax.naming.PartialResultException;
-
 public class CAQ<T> implements Queue<T>{
     private T[] array;
     private int front;
@@ -15,7 +13,7 @@ public class CAQ<T> implements Queue<T>{
         this.size = 0;
         this.rear = -1;
         this.front = 0;
-        this.array = (T[]) new Object[capacity];
+        this.array = new T[capacity]; \\ wrong!!
     }
 
     @Override
@@ -58,3 +56,4 @@ public class CAQ<T> implements Queue<T>{
         return size;
     }
 }
+
